@@ -79,7 +79,7 @@ print(data)
 
 # Master Sheet (Sheet0)
 if 'Sheet0' not in wb.sheetnames:
-    #head = []
+    # head = []
     head = ['Name', 'PS Number', 'Email', 'Phone Number', 'Batch', 'Location', 'BU', 'XYZ']
     ws = wb.create_sheet('Sheet0')
     print("CREATING")
@@ -88,7 +88,7 @@ if 'Sheet0' not in wb.sheetnames:
         ws.cell(row=1, column=i).value = head[i - 1]
     for i in range(1, 9):
         clr = ws.cell(row=1, column=i)
-        clr.font = Font(bold=True, color="006400")
+        clr.font = Font(bold=True)
     for i in range(1, 9):
         ws.cell(row=s + 1, column=i).value = data[i - 1]
     wb.save(path)
