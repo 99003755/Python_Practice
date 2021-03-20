@@ -116,7 +116,8 @@ class Excel():
         bar_c = ws.max_column
         print("row: ", bar_r)
         print("col: ", bar_c)
-
+        if bar_r <=2:
+            bar_r = 3
         self.data = Reference(ws, min_col=4, min_row=abs(bar_r-2), max_row=bar_r, max_col=bar_c)
 
         chart1.add_data(self.data, titles_from_data=True)
