@@ -83,10 +83,10 @@ chart1 = BarChart()
 #chart1.type = "col"
 #chart1.style = 11
 chart1.title = "EXCEL DATA"
-chart1.y_axis.title = 'Attributes'
-chart1.x_axis.title = 'X-axis'
+chart1.y_axis.title = 'Marks'
+chart1.x_axis.title = 'Student'
 print(col)
-data = Reference(ws, min_col=3, min_row=2, max_row=10, max_col=4)
+data = Reference(ws, min_col=4, min_row=2, max_row=4, max_col=36)
 
 chart1.add_data(data, titles_from_data=True)
 #chart1.set_categories(cats)
